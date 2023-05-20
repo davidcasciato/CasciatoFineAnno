@@ -1,8 +1,20 @@
-<p>    nome utente: <input type="text" [(ngModel)]="username">
-</p>
-<p>
-    password: <input type="password" [(ngModel)]="password">
-</p>
-<button (click)="abilita()">
-    {{testoBottone}}
-</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+<body>
+    <p class="utente"> 
+        nome utente: <input type="text" [(ngModel)]="username">
+    </p>
+    <p class="password">
+        password: <input type="password" [(ngModel)]="password">
+    </p>
+    <button routerLink="{{nome}}" class="abilita" (click)="abilita()">
+        {{testoBottone}}
+    </button>
+</body>
+</html>

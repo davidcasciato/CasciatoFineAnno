@@ -3,5 +3,7 @@ export class studente {
     nome:string="";
     cognome:string="";
     nascita:string="";
-    voti:number=0;
+    voti:number[]=[];
+
+
 }

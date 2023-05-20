@@ -11,6 +11,7 @@ export class RegistrazioneComponent {
   username: string="";
   password: string="";
   testoBottone: string;
+  nome: string="";
 
   constructor (public service:ServizioService)
   {
@@ -23,8 +24,8 @@ export class RegistrazioneComponent {
   {
       if (this.username.trim().toUpperCase() == "DAVID" &&  this.password == "IO")
       {
-
-        this.testoBottone = "SEI validato";
+        this.nome = "/registro";
+        this.testoBottone = "ENTRA NEL REGISTRO";
         // abilitato l'utente alla visualizzazione
         this.service.setAbilita(true);
       }
