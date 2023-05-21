@@ -15,7 +15,7 @@
 </thead>
 <tbody *ngFor="let studente of servizio.elencoStudenti; let i = index">
     <td class="idR">{{studente.id}}</td>
-    <td class="studenteR">{{studente.nome}} {{studente.cognome}}<br>{{studente.nascita}}</td>
+    <button routerLink="/alunno"><td class="studenteR">{{studente.nome}} {{studente.cognome}}<br>{{studente.nascita}}</td></button>
     <td class="votiR">{{studente.voti}}</td>
 </tbody>
 </table>

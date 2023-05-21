@@ -22,7 +22,7 @@ export class RegistrazioneComponent {
 
   abilita()
   {
-      if (this.username.trim().toUpperCase() == "DAVID" &&  this.password == "IO")
+      if (this.username == "DAVID" &&  this.password == "IO")
       {
         this.nome = "/registro";
         this.testoBottone = "ENTRA NEL REGISTRO";
