@@ -15,8 +15,18 @@
 </thead>
 <tbody *ngFor="let studente of servizio.elencoStudenti; let i = index">
     <td class="idR">{{studente.id}}</td>
-    <button routerLink="/alunno"><td class="studenteR">{{studente.nome}} {{studente.cognome}}<br>{{studente.nascita}}</td></button>
-    <td class="votiR">{{studente.voti}}</td>
+    <button (click)="selezione(i)" routerLink="/alunno"><td class="studenteR">{{studente.nome}} {{studente.cognome}}<br>{{studente.nascita}}</td></button>
+    <td class="votiR"><span *ngFor="let x of studente.voti" >{{x}},</span>
+        <select [(ngModel)] = selettore[i]>
+        <option>10</option>
+        <option>9</option>
+        <option>8</option>
+        <option>7</option>
+        <option>6</option>
+        <option>5</option>
+        <option>4</option>
+        <option>3</option>
+      </select><button type="button" *ngIf="selettore[i] != null" (click)="addVoto(i)">+</button></td>
 </tbody>
 </table>
 </body>
