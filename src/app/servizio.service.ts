@@ -44,7 +44,7 @@ export class ServizioService {
       id: 5,
       nome:"Andrea",
       cognome:"Campostrini",
-      nascita:"14/05/2020",
+      nascita:"14/05/2005",
       voti:[]
     },
     {

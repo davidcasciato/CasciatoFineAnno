@@ -12,6 +12,11 @@
      <p>andamento scolastico di: {{alunno.nome}} {{alunno.cognome}}</p>
      <div id="chart"> 
      <apx-chart [series]="chartOptions.series!" [chart]="chartOptions.chart!" [title]="chartOptions.title!" [stroke]="chartOptions.stroke!" [yaxis]="chartOptions.yaxis!"></apx-chart>
+     </div>
+    <div class="alert alert-{{meddia}}"  role="alert">
+        <p>media: {{media}}</p>
     </div>
+
+    
 </body>
 </html>

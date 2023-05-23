@@ -32,6 +32,10 @@ export type ChartOptions = {
   styleUrls: ['./alunno.component.css']
 })
 export class AlunnoComponent {
+  media: number = 0;
+  meddia:string="danger";
+  tmp: number = 0;
+  
   @ViewChild("chart")
   chart!: ChartComponent;
   @Input() alunno: studente;
@@ -39,8 +43,17 @@ export class AlunnoComponent {
   public chartOptions: Partial<ChartOptions>;
 
   constructor(servizio: ServizioService){
+    
     this.alunno = servizio.getStudente();
-
+    for (let i = 0; i< this.alunno.voti.length; i++){
+      this.tmp += Number(this.alunno.voti[i]);
+    }
+    this.media = (this.tmp / this.alunno.voti.length);
+    this.media = Math.round((this.media + Number.EPSILON) * 100) / 100;
+    if (this.media >=6){
+      this.meddia = "success"
+    }
+  
     this.chartOptions = {
       series: [
         {
@@ -78,7 +91,6 @@ export class AlunnoComponent {
       
 
   }
-console.log(this.chartOptions);
 }
 
 ngOnInit(): void { }
