@@ -12,6 +12,7 @@ export class RegistrazioneComponent {
   password: string="";
   testoBottone: string;
   nome: string="";
+  disabilitato: String ="disabled";
 
   constructor (public service:ServizioService)
   {

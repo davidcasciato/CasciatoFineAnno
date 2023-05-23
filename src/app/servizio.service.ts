@@ -16,21 +16,21 @@ export class ServizioService {
       id: 1,
       nome:"Alessio",
       cognome:"Andrighi",
-      nascita:"//2005",
+      nascita:"02/10/2005",
       voti:[]
     },
     {
       id: 2,
       nome:"Andrea",
       cognome:"Bianchi",
-      nascita:"//2005",
+      nascita:"30/07/2005",
       voti:[]
     },
     {
       id: 3,
       nome:"Gabriel",
       cognome:"Bertini",
-      nascita:"//2005",
+      nascita:"05/11/2005",
       voti:[]
     },
     {
@@ -44,7 +44,7 @@ export class ServizioService {
       id: 5,
       nome:"Andrea",
       cognome:"Campostrini",
-      nascita:"//2020",
+      nascita:"14/05/2020",
       voti:[]
     },
     {
@@ -65,14 +65,14 @@ export class ServizioService {
       id: 8,
       nome:"Jacopo",
       cognome:"Comper",
-      nascita:"//2005",
+      nascita:"16/07/2005",
       voti:[]
     },
     {
       id: 9,
       nome:"Nicolas",
       cognome:"Di Filippo",
-      nascita:"02/05/2005",
+      nascita:"03/05/2005",
       voti:[]
     },
     {
@@ -107,7 +107,7 @@ export class ServizioService {
       id: 14,
       nome:"Matteo",
       cognome:"Simonetti",
-      nascita:"//2005",
+      nascita:"31/01/2005",
       voti:[]
     },
     {
@@ -128,14 +128,14 @@ export class ServizioService {
       id: 17,
       nome:"Mustafa",
       cognome:"Vugdalic",
-      nascita:"30/12/2003",
+      nascita:"29/12/2003",
       voti:[]
     },
     {
       id: 18,
       nome:"Viktor",
       cognome:"Zamboni",
-      nascita:"//2004",
+      nascita:"17/10/2004",
       voti:[]
     }
   ]

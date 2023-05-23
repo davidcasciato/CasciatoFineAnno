@@ -1,4 +1,5 @@
-import { Component, Input} from '@angular/core';
+
+import { Component, Input, ViewChild} from '@angular/core';
 import { ServizioService } from '../servizio.service';
 import { RegistroComponent } from '../registro/registro.component';
 import { studente } from '../studenti';
@@ -7,6 +8,7 @@ import {
   ApexAxisChartSeries,
   ApexChart,
   ApexXAxis,
+  ApexYAxis,
   ApexDataLabels,
   ApexTitleSubtitle,
   ApexStroke,
@@ -17,6 +19,7 @@ export type ChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
   xaxis: ApexXAxis;
+  yaxis: ApexYAxis;
   dataLabels: ApexDataLabels;
   grid: ApexGrid;
   stroke: ApexStroke;
@@ -29,6 +32,8 @@ export type ChartOptions = {
   styleUrls: ['./alunno.component.css']
 })
 export class AlunnoComponent {
+  @ViewChild("chart")
+  chart!: ChartComponent;
   @Input() alunno: studente;
   
   public chartOptions: Partial<ChartOptions>;
@@ -44,7 +49,7 @@ export class AlunnoComponent {
         }
       ],
       chart: {
-        height: 10,
+        height: 350,
         type: "line",
         zoom: {
           enabled: false
@@ -54,10 +59,10 @@ export class AlunnoComponent {
         enabled: false
       },
       stroke: {
-        curve: "straight"
+        curve: "smooth"
       },
       title: {
-        text: "Product Trends by Month",
+        text: "voti",
         align: "left"
       },
       grid: {
@@ -65,10 +70,16 @@ export class AlunnoComponent {
           colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
           opacity: 0.5
         }
+      },
+      yaxis:{
+        min:3,
+        max:10
       }
+      
 
   }
-
+console.log(this.chartOptions);
 }
+
 ngOnInit(): void { }
 }

@@ -10,6 +10,7 @@ export class RegistroComponent {
   
   selezioneCorrente : number; 
   selettore: Array<number>;
+  votii: number[] = [];
 
     @Output() studenteSelezionato = new EventEmitter<number>();
 
@@ -18,6 +19,9 @@ export class RegistroComponent {
     {
       this.selezioneCorrente = 0;
       this.selettore = Array(this.servizio.elencoStudenti.length);
+      for (let i = 3; i<=10; i += 0.25){
+        this.votii.push(i);
+      }
     }
 
     addVoto(id: number) {

@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
 
-     <p>{{alunno.nome}} {{alunno.cognome}}</p>
+     <p>andamento scolastico di: {{alunno.nome}} {{alunno.cognome}}</p>
+     <div id="chart"> 
+     <apx-chart [series]="chartOptions.series!" [chart]="chartOptions.chart!" [title]="chartOptions.title!" [stroke]="chartOptions.stroke!" [yaxis]="chartOptions.yaxis!"></apx-chart>
+    </div>
 </body>
 </html>

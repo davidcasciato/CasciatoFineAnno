@@ -7,13 +7,13 @@
     <title>Log In</title>
 </head>
 <body>
-    <p class="utente"> 
-        nome utente: <input type="text" [(ngModel)]="username">
+    <p class="form-control" > 
+        nome utente: <input type="text" [(ngModel)]="username" placeholder="nome utente">
     </p>
-    <p class="password">
-        password: <input type="password" [(ngModel)]="password">
+    <p class="form-control">
+        password: <input type="password" [(ngModel)]="password" placeholder="password">
     </p>
-    <button routerLink="{{nome}}" class="abilita" (click)="abilita()">
+    <button routerLink="{{nome}}" (click)="abilita()" class="btn btn-primary">
         {{testoBottone}}
     </button>
 </body>
